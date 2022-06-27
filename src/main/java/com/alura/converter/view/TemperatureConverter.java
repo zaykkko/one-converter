@@ -22,7 +22,7 @@ import com.alura.converter.constants.Localization;
 import com.alura.converter.controllers.TemperatureController;
 
 public class TemperatureConverter extends JFrame {
-	private static final long serialVersionUID = 4098452243306775760L;
+	private static final long serialVersionUID = -9163990309679470742L;
 
 	static final int FRAME_WIDTH = 400, FRAME_HEIGHT = 160;
 

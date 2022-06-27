@@ -25,7 +25,7 @@ import com.alura.converter.loader.CurrenciesLoader;
 import com.alura.converter.model.CurrencyModel;
 
 public class CurrencyConverter extends JFrame {
-	private static final long serialVersionUID = -4551150801689964186L;
+	private static final long serialVersionUID = -5254015709878479371L;
 
 	static final int FRAME_WIDTH = 400, FRAME_HEIGHT = 220;
 
@@ -46,7 +46,7 @@ public class CurrencyConverter extends JFrame {
 		super(Localization.CURRENCY_CONVERTER);
 
 		this.defaultLocale = Currency.getInstance(localeCode);
-		this.csvFileName = csvFileName; 
+		this.csvFileName = csvFileName;
 
 		this.currencyController = new CurrencyController(this.defaultLocale);
 		this.currencies = new CurrenciesLoader(csvFileName).loadAndParse();

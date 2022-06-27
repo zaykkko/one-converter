@@ -31,8 +31,7 @@ public class CurrenciesLoader {
 		csvMapper.enable(CsvParser.Feature.ALLOW_COMMENTS);
 
 		try {
-			MappingIterator<Map<String, String>> it = csvMapper.readerFor(Map.class).with(schema)
-					.readValues(csvFile);
+			MappingIterator<Map<String, String>> it = csvMapper.readerFor(Map.class).with(schema).readValues(csvFile);
 
 			while (it.hasNext()) {
 				Map<String, String> rowMap = it.next();
@@ -47,7 +46,7 @@ public class CurrenciesLoader {
 				}
 			}
 		} catch (IOException e) {
-			
+
 			e.printStackTrace();
 		}
 

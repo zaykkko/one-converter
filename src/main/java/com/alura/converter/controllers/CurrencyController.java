@@ -9,7 +9,7 @@ import com.alura.converter.model.CurrencyModel;
 
 public class CurrencyController {
 	private Currency defaultLocale;
-	
+
 	public CurrencyController(Currency localeCurrency) {
 		this.defaultLocale = localeCurrency;
 	}

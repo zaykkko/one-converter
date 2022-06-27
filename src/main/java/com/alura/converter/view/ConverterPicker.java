@@ -19,10 +19,10 @@ import com.alura.converter.constants.Localization;
 import com.alura.converter.model.ConversionOption;
 
 public class ConverterPicker extends JFrame {
-	private static final long serialVersionUID = 7006716570313503808L;
+	private static final long serialVersionUID = 6355266473904190838L;
 
 	static final int FRAME_WIDTH = 400, FRAME_HEIGHT = 150;
-	
+
 	private Properties config;
 
 	private GroupLayout groupLayout;
@@ -32,18 +32,16 @@ public class ConverterPicker extends JFrame {
 
 	public ConverterPicker(Properties config) {
 		super(Localization.MAIN_MENU_WINDOW_TITLE);
-		
+
 		this.config = config;
-		
-		/*File iconFile = new File("static/icons/favicon.png"); //Meh
-		
-		try {
-			BufferedImage icon = ImageIO.read(iconFile);
-			
-			setIconImage(icon);
-		} catch (IOException e) {
-			setIconImage(null);
-		}*/
+
+		/*
+		 * File iconFile = new File("static/icons/favicon.png"); //Meh
+		 * 
+		 * try { BufferedImage icon = ImageIO.read(iconFile);
+		 * 
+		 * setIconImage(icon); } catch (IOException e) { setIconImage(null); }
+		 */
 
 		Container container = getContentPane();
 		groupLayout = new GroupLayout(container);
@@ -104,10 +102,11 @@ public class ConverterPicker extends JFrame {
 		ConversionOption targetConversor = (ConversionOption) comboConverter.getSelectedItem();
 
 		startProgramBtn.setEnabled(false);
-		
+
 		switch (targetConversor.getId()) {
 		case 1:
-			new CurrencyConverter(closeEventHandler(), this.config.getProperty("defaultCurrency"), this.config.getProperty("csvFileName"));
+			new CurrencyConverter(closeEventHandler(), this.config.getProperty("defaultCurrency"),
+					this.config.getProperty("csvFileName"));
 			break;
 
 		case 2:
